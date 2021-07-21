@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="PublicFoundation.CategoryControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PublicFoundation"
+             mc:Ignorable="d" 
+             d:DesignHeight="540" d:DesignWidth="1020">
+    <Grid Background="LightGray">
+        <DataGrid x:Name="gridcategory" Width="550" Height="400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,10,0,0" IsReadOnly="true" AutoGenerateColumns="False"  VerticalGridLinesBrush="#FF195795" HeadersVisibility="Column" SelectionChanged="gridcategory_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}"  Width="70" Header="№" />
+                <DataGridTextColumn Binding="{Binding title}" Width="350" Header="Категория" />
+                <DataGridTextColumn Binding="{Binding abbreviation}" Width="120" Header="Сокр" />
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Button x:Name="buttonaddcategory" Width="200" Margin="70,0,0,70" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="buttonaddcategory_Click">Добавить категорию</Button>
+        <Button x:Name="buttondeletecategory" Width="200" Margin="420,0,0,70" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="buttondeletecategory_Click" >Удалить категорию</Button>
+        <Button x:Name="buttoneditcategory" Margin="650,227,218,281" Click="buttoneditcategory_Click" >Изменить категорию</Button>
+        <TextBox x:Name="categorynamebox" Foreground="Black" FontSize="18" Margin="650,81,56,427"/>
+        <TextBox x:Name="categorabbrevbox" Foreground="Black" FontSize="18" Margin="650,149,218,359"/>
+    </Grid>
+</UserControl>

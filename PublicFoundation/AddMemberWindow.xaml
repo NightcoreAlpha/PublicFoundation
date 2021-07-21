@@ -1,0 +1,97 @@
+﻿<Window x:Class="PublicFoundation.AddMemberWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PublicFoundation"
+        mc:Ignorable="d"
+        Title="AddMemberWindow" Height="556" Width="821" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="None" MouseDown="Window_MouseDown">
+    <Grid Background="LightGray">
+        <GroupBox Header="Основная информация" Padding="1" Width="400" Height="256" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15">
+            <Grid Margin="0,0,0,0" Width="auto" Height="auto">
+                <TextBlock Margin="10,10,342,206" Text="Рег. №"/>
+                <TextBox x:Name="regbox" Padding="0" Margin="65,10,199,202" Height="20"/>
+                <TextBlock Margin="10,44,342,166"><Run Language="ru-ru" Text="Имя"/></TextBlock>
+                <TextBox x:Name="namebox" Padding="0" Margin="65,44,199,168" Height="20"/>
+                <TextBlock Margin="10,80,342,131"><Run Language="ru-ru" Text="Фам."/></TextBlock>
+                <TextBox x:Name="fambox" Padding="0" Margin="65,80,199,132" Height="20"/>
+                <TextBlock Margin="10,116,337,96"><Run Language="ru-ru" Text="Отчест."/></TextBlock>
+                <TextBox x:Name="otchbox" Padding="0" Margin="65,116,199,96" Height="20"/>
+                <!--<TextBlock Margin="229,14,123,199"><Run Language="ru-ru" Text="Лет"/></TextBlock>
+                <TextBox x:Name="agebox" IsReadOnly="True" Padding="0" Margin="284,14,10,198" Height="20"/>-->
+                <TextBlock Margin="229,20,123,193"><Run Language="ru-ru" Text="Пол"/></TextBlock>
+                <ComboBox x:Name="genderbox" Padding="0" Margin="284,20,10,0" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Margin="229,65,123,144"><Run Language="ru-ru" Text="Рожд."/></TextBlock>
+                <DatePicker x:Name="bdaybox" HorizontalAlignment="Left" Margin="284,61,0,0" VerticalAlignment="Top" Width="104"/>
+                <TextBlock Margin="229,110,123,103"><Run Language="ru-ru" Text="Тел."/></TextBlock>
+                <TextBox x:Name="telbox" Padding="0" Margin="265,110,10,102" Height="20"/>
+                <TextBlock Margin="210,147,115,66"><Run Language="ru-ru" Text="Групп.инв."/></TextBlock>
+                <ComboBox x:Name="gruppabox" Padding="0" Margin="284,147,10,0" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Margin="10,153,330,59"><Run Language="ru-ru" Text="Категор."/></TextBlock>
+                <ComboBox x:Name="categorybox" Padding="0" Margin="68,153,199,0" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Margin="10,188,342,25"><Run Language="ru-ru" Text="Статус"/></TextBlock>
+                <ComboBox x:Name="statusbox" Padding="0" Margin="65,188,199,0" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Margin="221,188,119,22"><Run Language="ru-ru" Text="Вступил"/></TextBlock>
+                <DatePicker x:Name="inbox" Padding="0" HorizontalAlignment="Left" Margin="284,184,0,0" VerticalAlignment="Top" Width="104"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Место жительства" Padding="1" FontSize="15" Margin="0,256,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="250" Width="400" RenderTransformOrigin="0.5,0.5">
+            <Grid>
+                <TextBlock Margin="10,10,342,196"><Run Language="ru-ru" Text="Улица"/></TextBlock>
+                <TextBox x:Name="streetbox" Padding="0" Margin="65,10,199,0" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Margin="4,44,336,162"><Run Language="ru-ru" Text="№ дома"/></TextBlock>
+                <TextBox x:Name="homebox" Padding="0" Margin="65,44,199,0" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Margin="26,78,338,128"><Run Language="ru-ru" Text="Кв."/></TextBlock>
+                <TextBox x:Name="kvbox" Padding="0" Margin="65,78,199,0" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Margin="10,147,296,59"><Run Language="ru-ru" Text="Насел. пункт"/></TextBlock>
+                <TextBox x:Name="districtbox" Padding="0" Margin="65,113,199,0" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Margin="10,113,342,93"><Run Language="ru-ru" Text="Район"/></TextBlock>
+                <TextBox x:Name="localitybox" Padding="0" Margin="104,147,160,0" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Margin="10,183,337,23"><Run Language="ru-ru" Text="Индекс"/></TextBlock>
+                <TextBox x:Name="indexbox" Padding="0" Margin="65,183,199,0" Height="20" VerticalAlignment="Top"/>
+                <TextBlock Margin="219,14,10,192" FontSize="12"><Run Language="ru-ru" Text="Актуальное место жительства"/></TextBlock>
+                <RichTextBox x:Name="actualbox" Padding="0" Margin="219,39,10,103" RenderTransformOrigin="0.5,0.5">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text=""/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <TextBlock Margin="207,183,140,23"><Run Language="ru-ru" Text="Регион"/></TextBlock>
+                <TextBox x:Name="regionbox" Padding="0" Margin="257,183,7,0" Height="20" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Паспортные данные" Padding="1" FontSize="15" Margin="400,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="506" Width="421">
+            <Grid Width="auto" Height="auto">
+                <TextBlock Margin="11,40,362,420"><Run Language="ru-ru" Text="Серия"/></TextBlock>
+                <TextBox x:Name="seriabox" Padding="0" Margin="65,42,224,420" Height="20"/>
+                <TextBlock Margin="10,93,363,367"><Run Language="ru-ru" Text="Номер"/></TextBlock>
+                <TextBox x:Name="nombox" Padding="0" Margin="65,93,224,369" Height="20"/>
+                <TextBlock Margin="14,172,360,289"><Run Language="ru-ru" Text="Выдан"/></TextBlock>
+                <RichTextBox x:Name="vidanbox" Padding="0" Margin="65,172,214,226" RenderTransformOrigin="0.5,0.5">
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text=""/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+                <TextBlock Margin="14,285,310,174"><Run Language="ru-ru" Text="Дата выдачи"/></TextBlock>
+                <DatePicker x:Name="datavidachibox" Padding="0" HorizontalAlignment="Left" Margin="106,281,0,0" VerticalAlignment="Top" Width="99"/>
+                <TextBlock Margin="220,42,130,418"><Run Language="ru-ru" Text="Код подр."/></TextBlock>
+                <TextBox x:Name="podrazdelbox" Padding="0" Margin="288,42,10,420" Height="20"/>
+                <TextBlock Margin="232,95,130,365"><Run Language="ru-ru" Text="Гос усл."/></TextBlock>
+                <CheckBox x:Name="gosuslbox" Padding="0" Margin="289,95,100,367" Height="20"/>
+                <TextBlock Margin="244,143,135,316"><Run Language="ru-ru" Text="ИНН"/></TextBlock>
+                <TextBox x:Name="innbox" Padding="0" Margin="289,143,10,319" Height="20"/>
+                <TextBlock Margin="227,181,135,278"><Run Language="ru-ru" Text="СНИЛС"/></TextBlock>
+                <TextBox x:Name="snilsbox" Padding="0" Margin="289,182,10,280" Height="20"/>
+                <TextBlock Margin="221,235,135,224"><Run Language="ru-ru" Text="№ Пенс."/></TextBlock>
+                <TextBox x:Name="nompensbox" Padding="0" Margin="289,236,10,226" Height="20"/>
+                <TextBlock Margin="225,290,135,170"><Run Language="ru-ru" Text="№ ВТЭК"/></TextBlock>
+                <TextBox x:Name="vtekbox" Padding="0" Margin="289,290,10,172" Height="20"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="addbutton" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="200,0,0,10" Width="137" Content="Добавить" Click="addbutton_Click"/>
+        <Button x:Name="closebutton" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,200,10" Width="137" Content="Отмена" Click="closebutton_Click"/>
+    </Grid>
+</Window>

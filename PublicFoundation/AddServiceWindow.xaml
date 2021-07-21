@@ -1,0 +1,15 @@
+﻿<Window x:Class="PublicFoundation.AddServiceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PublicFoundation"
+        mc:Ignorable="d"
+        Title="AddServiceWindow" Height="250" Width="500" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
+    <Grid Background="LightGray">
+        <DatePicker x:Name="datebox" FontSize="15" Padding="2" Width="115" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="60,64,0,0"></DatePicker>
+        <TextBox x:Name="memberbox" Margin="180,64,0,0" Width="240" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15" Padding="2"></TextBox>
+        <Button x:Name="addbutton" Margin="60,0,0,40" Width="140" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" Padding="1" Click="addbutton_Click">Добавить</Button>
+        <Button x:Name="closebutton" Margin="290,0,0,40" Width="140" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="14" Padding="1" Click="closebutton_Click">Отмена</Button>
+    </Grid>
+</Window>

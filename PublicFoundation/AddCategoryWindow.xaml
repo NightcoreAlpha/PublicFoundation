@@ -1,0 +1,21 @@
+﻿<Window x:Class="PublicFoundation.AddCategoryWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PublicFoundation"
+        mc:Ignorable="d"
+        Title="AddCategoryWindow" Height="250" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" MouseDown="Window_MouseDown">
+    <Grid Background="LightGray">
+        <GroupBox Header="Категория" Margin="0,0,0,0">
+            <Grid>
+                <TextBlock Margin="10,22,324,159">Категория инвалидности:</TextBlock>
+                <TextBlock Margin="16,75,324,105">Сокращенное название:</TextBlock>
+                <TextBox x:Name="titlebox" Margin="158,14,27,152" FontSize="18"/>
+                <TextBox x:Name="abbrevbox" Margin="158,62,142,104" FontSize="18"/>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="okbutton" Margin="40,170,300,47" Height="33" Width="150" Click="Button_Click_1">Принять</Button>
+        <Button x:Name="closebutton" Margin="300,170,40,47" Height="33" Width="150" Click="Button_Click">Отмена</Button>
+    </Grid>
+</Window>

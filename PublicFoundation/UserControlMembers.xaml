@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="PublicFoundation.UserControlMembers"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PublicFoundation"
+             mc:Ignorable="d"
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="540" d:DesignWidth="1020">
+    <Grid Width="auto" Height="auto">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF05084B" Offset="1"/>
+                <GradientStop Color="#FF1F6993" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="gridinvalid" Margin="70,10,10,80" IsReadOnly="True" AutoGenerateColumns="False" SelectionChanged="gridinvalid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}" Header="№" />
+                <DataGridTextColumn Binding="{Binding registration_number}" Header="Рег. номер" />
+                <DataGridTextColumn Binding="{Binding first_name}" Header="Имя" />
+                <DataGridTextColumn Binding="{Binding middle_name}" Header="Фамилия" />
+                <DataGridTextColumn Binding="{Binding last_name}" Header="Отчество" />
+                <DataGridTextColumn Binding="{Binding age}" Header="Лет" />
+                <DataGridTextColumn Binding="{Binding gender}" Header="Пол" />
+                <DataGridTextColumn Binding="{Binding bday}" Header="Дата рожд." />
+                <DataGridTextColumn Binding="{Binding phone_number}" Header="Телефон" />
+                <DataGridTextColumn Binding="{Binding disability_group}" Header="Группа инв." />
+                <DataGridTextColumn Binding="{Binding category_id}" Header="Категория инв." />
+                <DataGridTextColumn Binding="{Binding status}" Header="Статус" />
+                <DataGridTextColumn Binding="{Binding entry_date}" Header="Дата вступления" />
+                <DataGridTextColumn Binding="{Binding residence_street}" Header="Улица" />
+                <DataGridTextColumn Binding="{Binding residence_house_number}" Header="Дом" />
+                <DataGridTextColumn Binding="{Binding residence_apartment_number}" Header="кв." />
+                <DataGridTextColumn Binding="{Binding residence_locality}" Header="Населенный пункт" />
+                <DataGridTextColumn Binding="{Binding residence_district}" Header="Район" />
+                <DataGridTextColumn Binding="{Binding residence_region}" Header="Регион" />
+                <DataGridTextColumn Binding="{Binding residence_postal_code}" Header="Индекс" />
+                <DataGridTextColumn Binding="{Binding actual_district}" Header="Актуальное место жительства" />
+                <DataGridTextColumn Binding="{Binding passport_series}" Header="Серия паспорта" />
+                <DataGridTextColumn Binding="{Binding passport_number}" Header="Номер паспорта" />
+                <DataGridTextColumn Binding="{Binding passport_issued_by}" Header="Кем выдан" />
+                <DataGridTextColumn Binding="{Binding passport_issued_date}" Header="Дата выдачи" />
+                <DataGridTextColumn Binding="{Binding passport_division_code}" Header="Код подразделения" />
+                <DataGridTextColumn Binding="{Binding gosuslugi_registration_availability}" Header="Госуслуги" />
+                <DataGridTextColumn Binding="{Binding inn}" Header="ИНН" />
+                <DataGridTextColumn Binding="{Binding snils}" Header="СНИЛС" />
+                <DataGridTextColumn Binding="{Binding pension_certificate_number}" Header="Номер пенсионного" />
+                <DataGridTextColumn Binding="{Binding vtek_number}" Header="Улица" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Margin="70,0,0,7" Width="940" Height="67" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Button x:Name="addbox" Margin="0,-2,0,0"  Width="200" Height="40" HorizontalAlignment="Left" VerticalAlignment="Center" Padding="0" FontSize="15" Click="addbox_Click" Cursor="Hand">добавить</Button>
+            <Button x:Name="editbox" Margin="0,0,0,0" Width="200" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="0" FontSize="15" Click="editbox_Click">изменить</Button>
+            <Button x:Name="deletebox" Width="200" Height="40" HorizontalAlignment="Right" VerticalAlignment="Center" Padding="0" FontSize="15" Click="deletebox_Click" Margin="605,0,0,0">удалить</Button>
+        </Grid>
+    </Grid>
+</UserControl>
