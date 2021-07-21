@@ -16,9 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="fen.sqlite">
+    <EmbeddedResource Include="fen.sqlite">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
